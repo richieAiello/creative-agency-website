@@ -17,35 +17,34 @@
 
   <title>Frontend Mentor | Creative single page site</title>
 </head>
-
 <body class="body">
 
   <nav class="nav">
-    <img src="./assets/svg/logo.svg" alt="Creative logo" class="logo">
-
-    <!-- Label is hidden and still accessible to screen readers. -->
-    <label for="hamburger-menu" class="invisible-label">
-      Click to open navigation menu on mobile
-    </label>
-    <!-- Displayed on mobile. -->
-    <button type="button" class="btn hamburger" id="hamburger-menu">
-      <img src="./assets/svg/icon-hamburger.svg" alt="" class="hamburger__open">
-      <img src="./assets/svg/icon-cross.svg" alt="" class="hamburger__close hidden">
-    </button>
-    
-    <!-- Hidden on mobile and displayed on click. Visible on tablet and desktop. -->
-    <div class="nav__menu hidden">
-      <ul class="nav__list">
-        <li class="nav__item">About</li>
-        <li class="nav__item">Service</li>
-        <li class="nav__item">Projects</li>
-      </ul>
-      <a href="#" class="btn btn--schedule">Schedule a Call</a>
+    <div class="container">
+      <img src="./assets/svg/logo.svg" alt="Creative logo" class="logo">
+      <!-- Label is hidden and still accessible to screen readers. -->
+      <label for="hamburger-menu" class="invisible-label">
+        Click to open navigation menu on mobile
+      </label>
+      <!-- Displayed on mobile. -->
+      <button type="button" class="btn hamburger" id="hamburger-menu">
+        <img src="./assets/svg/icon-hamburger.svg" alt="" class="hamburger__open">
+        <img src="./assets/svg/icon-cross.svg" alt="" class="hamburger__close hidden">
+      </button>
+      <!-- Hidden on mobile and displayed on click. Visible on tablet and desktop. -->
+      <div class="nav__menu hidden">
+        <ul class="nav__list">
+          <li class="nav__item">About</li>
+          <li class="nav__item">Service</li>
+          <li class="nav__item">Projects</li>
+        </ul>
+        <a href="#" class="btn btn--schedule">Schedule a Call</a>
+      </div>
     </div>
   </nav>
 
   <header class="hero">
-    <div class="context">
+    <div class="hero__context container">
       <h1 class="hero__heading">Branding & website design agency</h1>
       <p class="hero__text">
         We specialize in visual storytelling by creating cohesive brand and website design
@@ -66,7 +65,49 @@
   </header>
 
   <main class="main">
-    <section class="design"></section>
+
+    <section class="design">
+      <div class="design__context container">
+        <h2 class="main__heading">
+          <span class="accent-text">Design</span> is strategic. 
+        </h2>
+        <p class="main__text">
+          A well-crafted design strategy consistently produces 
+          desired outcomes and brand awareness. 
+          We are firm believers that success lies in creative 
+          collaboration with our clients.
+        </p>
+        <a href="#" class="btn btn--design">Schedule a Call</a>
+      </div>
+
+      <!-- Displayed on mobile. --> 
+      <img 
+        src="./assets/mobile/image-strategic.jpg" 
+        alt="Top down of someone working at a cafe table with a notepad,
+        laptop, smartphone, drawing supplies, and a cappuccino with beautiful
+        latte art resting on top of a stack on magazines."
+        class="image image--design image--mobile"
+      >
+      <!-- Displayed on tablet. --> 
+      <img 
+        src="./assets/tablet/image-strategic.jpg" 
+        alt="Top down of someone working at a cafe table with a notepad,
+        laptop, smartphone, drawing supplies, and a cappuccino with beautiful
+        latte art resting on top of a stack on magazines."
+        class="image image--design image--tablet"
+      >
+      <!-- Displayed on desktop. --> 
+      <img 
+        src="./assets/desktop/image-strategic.jpg" 
+        alt="Top down of someone working at a cafe table with a notepad,
+        laptop, smartphone, drawing supplies, and a cappuccino with beautiful
+        latte art resting on top of a stack on magazines."
+        class="image image--design image--desktop"
+      >
+
+      <!-- Absolutely positioned bg pattern. -->
+      <img src="./assets/svg/bg-pattern-wave-red.svg" alt="" class="wave-red">
+    </section>
     <section class="approach"></section>
     <section class="brand"></section>
   </main>
