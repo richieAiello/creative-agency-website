@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -106,7 +105,7 @@
       >
 
       <!-- Absolutely positioned bg pattern. -->
-      <img src="./assets/svg/bg-pattern-wave-red.svg" alt="" class="wave-red">
+      <img src="./assets/svg/bg-pattern-wave-red.svg" alt="" class="bg-wave-red">
     </section>
 
     <!-- Background color white. -->
@@ -160,7 +159,103 @@
         </div>
       </div>
     </section>
-    <section class="brand"></section>
+
+    <!-- Background color white. -->
+    <section class="brand">
+      <!-- Background color black -->
+      <div class="context">
+        <div class="container">
+          <h2 class="main__heading brand__heading">
+            Brand naming & guidelines
+          </h2>
+
+          <div class="wrapper">
+            <!-- Label is hidden and still accessible to screen readers. -->
+            <label for="previous" class="invisible-label">
+              Click to view the previous slide
+            </label>
+            <button type="button" class="btn btn--prev" id="previous">
+              <img src="./assets/svg/icon-arrow-previous.svg" alt="">
+            </button>
+
+            <!-- Label is hidden and still accessible to screen readers. -->
+            <label for="next" class="invisible-label">
+              Click to view the next slide
+            </label>
+            <button type="button" class="btn btn--next" id="next">
+              <img src="./assets/svg/icon-arrow-next.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Look into applying lazy load to images in this section -->
+      <div class="brand__display">
+        <div class="brand__description">
+          <h4 class="brand__sub-heading">Lean Product Roadmap</h4>
+          <p class="brand__text">2019 Project</p>
+        </div>
+
+        <!-- Only one of these images are displayed at a time -->
+        <!-- Displayed on mobile by default. -->
+        <img 
+          src="./assets/mobile/image-slide-1.jpg" 
+          alt="Person holing and reading a pamphlet of a product roadmap."
+          class="image image--slide-1 image--mobile"  
+        >
+        <!-- Displayed on tablet by default. -->
+        <img 
+          src="./assets/tablet/image-slide-1.jpg" 
+          alt="Person holing and reading a pamphlet of a product roadmap."
+          class="image image--slide-1 image--tablet"  
+        >
+        <!-- Displayed on desktop by default. -->
+        <img 
+          src="./assets/desktop/image-slide-1.jpg" 
+          alt="Person holing and reading a pamphlet of a product roadmap."
+          class="image image--slide-1 image--desktop"  
+        >
+        <!-- Displayed on mobile, hidden on page load. -->
+        <img 
+          src="./assets/mobile/image-slide-2.jpg" 
+          alt="New majestic hotel merchandise including a bag, laptop, smartphone."
+          class="image image--slide-2 image--mobile hidden"  
+        >
+        <!-- Displayed on tablet, hidden on page load. -->
+        <img 
+          src="./assets/tablet/image-slide-2.jpg" 
+          alt="New majestic hotel merchandise including a bag, laptop, smartphone."
+          class="image image--slide-2 image--tablet hidden"  
+        >
+        <!-- Displayed on desktop, hidden on page load. -->
+        <img 
+          src="./assets/desktop/image-slide-2.jpg" 
+          alt="New majestic hotel merchandise including a bag, laptop, smartphone."
+          class="image image--slide-2 image--desktop hidden"  
+        >
+        <!-- Displayed on mobile, hidden on page load. -->
+        <img 
+          src="./assets/mobile/image-slide-3.jpg" 
+          alt="Web design project titled crypto dashboard."
+          class="image image--slide-3 image--mobile hidden"  
+        >
+        <!-- Displayed on tablet, hidden on page load. -->
+        <img 
+         src="./assets/tablet/image-slide-3.jpg" 
+         alt="Web design project titled crypto dashboard."
+         class="image image--slide-3 image--tablet hidden"  
+        >
+        <!-- Displayed on desktop, hidden on page load. -->
+        <img 
+          src="./assets/desktop/image-slide-3.jpg" 
+          alt="Web design project titled crypto dashboard."
+          class="image image--slide-3 image--desktop hidden"  
+        >  
+      </div>
+
+      <!-- Absolutely positioned bg pattern. -->
+      <img src="./assets/svg/bg-pattern-wavy-white.svg" alt="" class="bg-wave-white">
+    </section>
   </main>
 
   <footer class="footer "></footer>
