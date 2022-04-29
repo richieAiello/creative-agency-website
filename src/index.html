@@ -17,5 +17,256 @@
   <title>Frontend Mentor | Creative single page site</title>
 </head>
 <body class="body">
+
+  <nav class="nav">
+    <div class="container">
+      <img src="./assets/svg/logo.svg" alt="Creative logo" class="logo">
+      <!-- Label is hidden and still accessible to screen readers. -->
+      <label for="hamburger-menu" class="invisible-label">
+        Click to open navigation menu on mobile
+      </label>
+      <!-- Displayed on mobile. -->
+      <button type="button" class="btn hamburger" id="hamburger-menu">
+        <img src="./assets/svg/icon-hamburger.svg" alt="" class="hamburger__open">
+        <img src="./assets/svg/icon-cross.svg" alt="" class="hamburger__close hidden">
+      </button>
+      <!-- Hidden on mobile and displayed on click. Visible on tablet and desktop. -->
+      <div class="nav__menu hidden">
+        <ul class="nav__list">
+          <li class="nav__item">About</li>
+          <li class="nav__item">Service</li>
+          <li class="nav__item">Projects</li>
+        </ul>
+        <a href="#" class="btn btn--schedule">Schedule a Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__context container">
+      <h1 class="hero__heading">Branding & website design agency</h1>
+      <p class="hero__text">
+        We specialize in visual storytelling by creating cohesive brand and website design
+        solutions for small businesses, giving lasting impressions to audiences in a digital world.
+      </p>
+      <a href="#" class="btn btn--hero link">Learn more</a>
+    </div>
+
+    <!-- Displayed on mobile. -->
+    <img src="./assets/mobile/image-hero.jpg" alt="Developers focusing at work in a beautiful modern office."
+      class="image image--hero image--mobile">
+    <!-- Displayed on tablet. -->
+    <img src="./assets/tablet/image-hero.jpg" alt="Developers focusing at work in a beautiful modern office."
+      class="image image--hero image--tablet">
+    <!-- Displayed on desktop. -->
+    <img src="./assets/desktop/image-hero.jpg" alt="Developers focusing at work in a beautiful modern office."
+      class="image image--hero image--desktop">
+  </header>
+
+  <main class="main">
+
+    <section class="design">
+      <div class="design__context container">
+        <h2 class="main__heading">
+          <span class="accent-text">Design</span> is strategic. 
+        </h2>
+        <p class="main__text">
+          A well-crafted design strategy consistently produces 
+          desired outcomes and brand awareness. 
+          We are firm believers that success lies in creative 
+          collaboration with our clients.
+        </p>
+        <a href="#" class="btn btn--design">Schedule a Call</a>
+      </div>
+
+      <!-- Displayed on mobile. --> 
+      <img 
+        src="./assets/mobile/image-strategic.jpg" 
+        alt="Top down of someone working at a cafe table with a notepad,
+        laptop, smartphone, drawing supplies, and a cappuccino with beautiful
+        latte art resting on top of a stack on magazines."
+        class="image image--design image--mobile"
+      >
+      <!-- Displayed on tablet. --> 
+      <img 
+        src="./assets/tablet/image-strategic.jpg" 
+        alt="Top down of someone working at a cafe table with a notepad,
+        laptop, smartphone, drawing supplies, and a cappuccino with beautiful
+        latte art resting on top of a stack on magazines."
+        class="image image--design image--tablet"
+      >
+      <!-- Displayed on desktop. --> 
+      <img 
+        src="./assets/desktop/image-strategic.jpg" 
+        alt="Top down of someone working at a cafe table with a notepad,
+        laptop, smartphone, drawing supplies, and a cappuccino with beautiful
+        latte art resting on top of a stack on magazines."
+        class="image image--design image--desktop"
+      >
+
+      <!-- Absolutely positioned bg pattern. -->
+      <img src="./assets/svg/bg-pattern-wave-red.svg" alt="" class="bg-wave-red">
+    </section>
+
+    <!-- Background color white. -->
+    <section class="approach">
+      <!-- Background color red. -->
+      <div class="appraoch__context">
+        <div class="container">
+          <h2 class="main__heading approach__heading">
+            Our approach for
+            <br> 
+            creating a winning
+            <br> 
+            brand
+          </h2>
+
+          <article class="approach__article">
+            <h3 class="main__sub-heading">
+              <span class="bg-number">01</span>
+              Brand Strategy
+            </h3>
+            <p class="main__text">
+              Brand strategy is critical for long-term success.
+              Outshining competitors and capturing
+              the target audience are key.
+            </p>
+          </article>
+
+          <article class="approach__article">
+            <h3 class="main__sub-heading">
+              <span class="bg-number">02</span>
+              Brand Design
+            </h3>
+            <p class="main__text">
+              Keeping the brand design unique and meaningful
+              helps in communicating the brand’s timeless
+              value effectively.
+            </p>
+          </article>
+
+          <article class="approach__article">
+            <h3 class="main__sub-heading">
+              <span class="bg-number">03</span>
+              Web Design
+            </h3>
+            <p class="main__text">
+              A beautifully crafted website is the best tool
+              for brand awareness, and ultimately results
+              in increased revenues.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background color white. -->
+    <section class="brand">
+      <!-- Background color black -->
+      <div class="context">
+        <div class="container">
+          <h2 class="main__heading brand__heading">
+            Brand naming & guidelines
+          </h2>
+
+          <div class="wrapper">
+            <!-- Label is hidden and still accessible to screen readers. -->
+            <label for="previous" class="invisible-label">
+              Click to view the previous slide
+            </label>
+            <button type="button" class="btn btn--prev" id="previous">
+              <img src="./assets/svg/icon-arrow-previous.svg" alt="">
+            </button>
+
+            <!-- Label is hidden and still accessible to screen readers. -->
+            <label for="next" class="invisible-label">
+              Click to view the next slide
+            </label>
+            <button type="button" class="btn btn--next" id="next">
+              <img src="./assets/svg/icon-arrow-next.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Look into applying lazy load to images in this section -->
+      <div class="brand__display">
+        <div class="brand__description">
+          <h4 class="brand__sub-heading">Lean Product Roadmap</h4>
+          <p class="brand__text">2019 Project</p>
+        </div>
+
+        <!-- Only one of these images are displayed at a time -->
+        <!-- Displayed on mobile by default. -->
+        <img 
+          src="./assets/mobile/image-slide-1.jpg" 
+          alt="Person holing and reading a pamphlet of a product roadmap."
+          class="image image--slide-1 image--mobile"  
+        >
+        <!-- Displayed on tablet by default. -->
+        <img 
+          src="./assets/tablet/image-slide-1.jpg" 
+          alt="Person holing and reading a pamphlet of a product roadmap."
+          class="image image--slide-1 image--tablet"  
+        >
+        <!-- Displayed on desktop by default. -->
+        <img 
+          src="./assets/desktop/image-slide-1.jpg" 
+          alt="Person holing and reading a pamphlet of a product roadmap."
+          class="image image--slide-1 image--desktop"  
+        >
+        <!-- Displayed on mobile, hidden on page load. -->
+        <img 
+          src="./assets/mobile/image-slide-2.jpg" 
+          alt="New majestic hotel merchandise including a bag, laptop, smartphone."
+          class="image image--slide-2 image--mobile hidden"  
+        >
+        <!-- Displayed on tablet, hidden on page load. -->
+        <img 
+          src="./assets/tablet/image-slide-2.jpg" 
+          alt="New majestic hotel merchandise including a bag, laptop, smartphone."
+          class="image image--slide-2 image--tablet hidden"  
+        >
+        <!-- Displayed on desktop, hidden on page load. -->
+        <img 
+          src="./assets/desktop/image-slide-2.jpg" 
+          alt="New majestic hotel merchandise including a bag, laptop, smartphone."
+          class="image image--slide-2 image--desktop hidden"  
+        >
+        <!-- Displayed on mobile, hidden on page load. -->
+        <img 
+          src="./assets/mobile/image-slide-3.jpg" 
+          alt="Web design project titled crypto dashboard."
+          class="image image--slide-3 image--mobile hidden"  
+        >
+        <!-- Displayed on tablet, hidden on page load. -->
+        <img 
+         src="./assets/tablet/image-slide-3.jpg" 
+         alt="Web design project titled crypto dashboard."
+         class="image image--slide-3 image--tablet hidden"  
+        >
+        <!-- Displayed on desktop, hidden on page load. -->
+        <img 
+          src="./assets/desktop/image-slide-3.jpg" 
+          alt="Web design project titled crypto dashboard."
+          class="image image--slide-3 image--desktop hidden"  
+        >  
+      </div>
+
+      <!-- Absolutely positioned bg pattern. -->
+      <img src="./assets/svg/bg-pattern-wavy-white.svg" alt="" class="bg-wave-white">
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <h5 class="footer__heading">
+      Let's build something
+      <br>
+      great together.
+    </h5>
+    <a href="#" class="btn btn--schedule">Schedule a Call</a>
+    <img src="./assets/svg/bg-pattern-wave-red.svg" alt="" class="bg-wave-red">
+  </footer>
 </body>
-</html>
+
+</html> 

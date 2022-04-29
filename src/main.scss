@@ -26,8 +26,62 @@ $red: #F94F4F;
 }
 
 /******************************
+  Buttons
+******************************/
+.btn {
+  text-decoration: none;
+  background-color: initial;
+  border: initial;
+  color: inherit;
+}
+
+/******************************
+  Images
+******************************/
+.image {
+  max-width: 100%;
+  object-fit: cover;
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+
+  @media(min-width: 650px) {
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media(min-width: 1440px) {
+
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+}
+
+/******************************
   Display classes and keyframes
 ******************************/
+.invisible-label {
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; 
+  width: 1px; 
+  margin: -1px;
+}
+
 .hidden {
   display: none;
 }
