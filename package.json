@@ -1,0 +1,26 @@
+{
+  "name": "creative-agency-website",
+  "version": "1.0.0",
+  "description": "Frontend mentor intermediate level challenge.",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richieAiello/creative-agency-website.git"
+  },
+  "keywords": [],
+  "author": "Richard Aiello - https://github.com/richieAiello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richieAiello/creative-agency-website/issues"
+  },
+  "homepage": "https://github.com/richieAiello/creative-agency-website#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
+    "parcel": "^2.5.0",
+    "sass": "^1.51.0"
+  }
+}
