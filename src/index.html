@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,41 +17,61 @@
 
   <title>Frontend Mentor | Creative single page site</title>
 </head>
+
 <body class="body">
-  <nav class="nav"></nav>
+
+  <nav class="nav">
+    <img src="./assets/svg/logo.svg" alt="Creative logo" class="logo">
+
+    <!-- Label is hidden and still accessible to screen readers. -->
+    <label for="hamburger-menu" class="invisible-label">
+      Click to open navigation menu on mobile
+    </label>
+    <!-- Displayed on mobile. -->
+    <button type="button" class="btn hamburger" id="hamburger-menu">
+      <img src="./assets/svg/icon-hamburger.svg" alt="" class="hamburger__open">
+      <img src="./assets/svg/icon-cross.svg" alt="" class="hamburger__close hidden">
+    </button>
+    
+    <!-- Hidden on mobile and displayed on click. Visible on tablet and desktop. -->
+    <div class="nav__menu hidden">
+      <ul class="nav__list">
+        <li class="nav__item">About</li>
+        <li class="nav__item">Service</li>
+        <li class="nav__item">Projects</li>
+      </ul>
+      <a href="#" class="btn btn--schedule">Schedule a Call</a>
+    </div>
+  </nav>
+
   <header class="hero">
     <div class="context">
       <h1 class="hero__heading">Branding & website design agency</h1>
       <p class="hero__text">
-        We specialize in visual storytelling by creating cohesive brand and website design 
+        We specialize in visual storytelling by creating cohesive brand and website design
         solutions for small businesses, giving lasting impressions to audiences in a digital world.
       </p>
       <a href="#" class="btn btn--hero link">Learn more</a>
     </div>
-    <!-- Displayed on mobile -->
-    <img 
-      src="./assets/mobile/image-hero.jpg" 
-      alt="Developers focusing at work in a beautiful modern office."
-      class="image image--hero image--mobile"  
-    >
-    <!-- Displayed on tablet -->
-    <img 
-      src="./assets/tablet/image-hero.jpg" 
-      alt="Developers focusing at work in a beautiful modern office."
-      class="image image--hero image--tablet"  
-    >
-    <!-- Displayed on desktop -->
-    <img 
-      src="./assets/desktop/image-hero.jpg" 
-      alt="Developers focusing at work in a beautiful modern office."
-      class="image image--hero image--desktop"  
-    >
+
+    <!-- Displayed on mobile. -->
+    <img src="./assets/mobile/image-hero.jpg" alt="Developers focusing at work in a beautiful modern office."
+      class="image image--hero image--mobile">
+    <!-- Displayed on tablet. -->
+    <img src="./assets/tablet/image-hero.jpg" alt="Developers focusing at work in a beautiful modern office."
+      class="image image--hero image--tablet">
+    <!-- Displayed on desktop. -->
+    <img src="./assets/desktop/image-hero.jpg" alt="Developers focusing at work in a beautiful modern office."
+      class="image image--hero image--desktop">
   </header>
+
   <main class="main">
     <section class="design"></section>
     <section class="approach"></section>
     <section class="brand"></section>
   </main>
+
   <footer class="footer "></footer>
 </body>
+
 </html>

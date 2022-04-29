@@ -18,15 +18,21 @@ $red: #F94F4F;
   margin: 0;
 }
 
-.link {
-  text-decoration: none;
-  color: inherit;
-}
 /******************************
   Base Styles
 ******************************/
 .body {
   font-family: 'Commissioner', sans-serif;
+}
+
+/******************************
+  Buttons
+******************************/
+.btn {
+  text-decoration: none;
+  background-color: initial;
+  border: initial;
+  color: inherit;
 }
 
 /******************************
@@ -67,6 +73,15 @@ $red: #F94F4F;
 /******************************
   Display classes and keyframes
 ******************************/
+.invisible-label {
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; 
+  width: 1px; 
+  margin: -1px;
+}
+
 .hidden {
   display: none;
 }
