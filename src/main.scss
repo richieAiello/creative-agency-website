@@ -1,0 +1,33 @@
+/******************************
+  Variables
+******************************/
+$black: #000000;
+$white: #FFFFFF;
+$bg-black: #191921;
+$red: #F94F4F;
+
+
+/******************************
+  Reset and Scrollbar
+******************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/******************************
+  Base Styles
+******************************/
+.body {
+  font-family: 'Commissioner', sans-serif;
+}
+
+/******************************
+  Display classes and keyframes
+******************************/
+.hidden {
+  display: none;
+}
