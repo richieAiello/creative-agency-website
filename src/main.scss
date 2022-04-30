@@ -182,7 +182,7 @@ $light-red: #FF9393;
       line-height: inherit;
       margin-bottom: 0.9375rem;
     }
-    
+
     .bg-number {
       font-size: 5rem;
       line-height: 5.5rem;
@@ -190,6 +190,56 @@ $light-red: #FF9393;
       position: absolute;
       left: -16px;
       bottom: 71px;
+    }
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+
+    &__context {
+      order: 2;
+      padding: 4rem 0;
+      background-color: $bg-black;
+    }
+
+    &__heading {
+      margin-bottom: 1.5rem;
+    }
+
+    &__display {
+      position: relative;
+      margin-bottom: -0.5rem;
+
+      .container {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &__description {
+      text-align: right;
+      margin-top: auto;
+      margin-bottom: 2.1875rem;
+    }
+
+    &__sub-heading,
+    &__text {
+      font-size: inherit;
+      line-height: 1.25rem;
+    }
+
+    .bg-wave-white {
+      display: none;
+    }
+
+    .brand-icon {
+      transition: all 400ms;
     }
   }
 }
@@ -206,6 +256,11 @@ $light-red: #FF9393;
   border: initial;
   color: inherit;
   transition: all 400ms;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
 
   &--schedule {
     font-size: 1rem;
@@ -246,6 +301,22 @@ $light-red: #FF9393;
       border-color: $light-red;
     }
   }
+
+  &--prev {
+    margin-right: 1rem;
+  }
+
+  &--prev,
+  &--next { 
+    
+    &:hover,
+    &:focus {
+
+      .brand-icon {
+        stroke: $light-red;
+      }
+    }
+  }
 }
 
 /******************************
@@ -264,6 +335,11 @@ $light-red: #FF9393;
   &--design {
     max-height: 250px;
     object-position: top;
+  }
+
+  &--brand {
+    width: 100%;
+    max-height: 450px;
   }
 
   @media(min-width: 650px) {

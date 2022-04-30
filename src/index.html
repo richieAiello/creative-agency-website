@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="main.scss">
-  <script type="module" src="index.js "></script>
+  <script type="module" src="index.js"></script>
 
   <title>Frontend Mentor | Creative single page site</title>
 </head>
@@ -174,10 +174,12 @@
     <!-- Background color white. -->
     <section class="brand">
       <!-- Background color black -->
-      <div class="context">
+      <div class="brand__context">
         <div class="container">
           <h2 class="main__heading brand__heading bold">
-            Brand naming & guidelines
+            Brand naming &
+            <br>
+            guidelines
           </h2>
 
           <div class="wrapper">
@@ -186,7 +188,7 @@
               Click to view the previous slide
             </label>
             <button type="button" class="btn btn--prev" id="previous">
-              <img src="./assets/svg/icon-arrow-previous.svg" alt="">
+              <!-- SVG inserted via index.js -->
             </button>
 
             <!-- Label is hidden and still accessible to screen readers. -->
@@ -194,7 +196,7 @@
               Click to view the next slide
             </label>
             <button type="button" class="btn btn--next" id="next">
-              <img src="./assets/svg/icon-arrow-next.svg" alt="">
+              <!-- SVG inserted via index.js -->
             </button>
           </div>
         </div>
@@ -202,9 +204,11 @@
 
       <!-- Look into applying lazy load to images in this section -->
       <div class="brand__display">
-        <div class="brand__description">
-          <h4 class="brand__sub-heading bold">Lean Product Roadmap</h4>
-          <p class="brand__text">2019 Project</p>
+        <div class="container">
+          <div class="brand__description">
+            <h4 class="brand__sub-heading bold">Lean Product Roadmap</h4>
+            <p class="brand__text">2019 Project</p>
+          </div>
         </div>
 
         <!-- Only one of these images are displayed at a time -->
@@ -212,59 +216,59 @@
         <img 
           src="./assets/mobile/image-slide-1.jpg" 
           alt="Person holing and reading a pamphlet of a product roadmap."
-          class="image image--slide-1 image--mobile"  
+          class="image image--brand image--slide-1 image--mobile"  
         >
         <!-- Displayed on tablet by default. -->
         <img 
           src="./assets/tablet/image-slide-1.jpg" 
           alt="Person holing and reading a pamphlet of a product roadmap."
-          class="image image--slide-1 image--tablet"  
+          class="image image--brand image--slide-1 image--tablet"  
         >
         <!-- Displayed on desktop by default. -->
         <img 
           src="./assets/desktop/image-slide-1.jpg" 
           alt="Person holing and reading a pamphlet of a product roadmap."
-          class="image image--slide-1 image--desktop"  
+          class="image image--brand image--slide-1 image--desktop"  
         >
         <!-- Displayed on mobile, hidden on page load. -->
         <img 
           src="./assets/mobile/image-slide-2.jpg" 
           alt="New majestic hotel merchandise including a bag, laptop, smartphone."
-          class="image image--slide-2 image--mobile hidden"  
+          class="image image--brand image--slide-2 image--mobile hidden"  
         >
         <!-- Displayed on tablet, hidden on page load. -->
         <img 
           src="./assets/tablet/image-slide-2.jpg" 
           alt="New majestic hotel merchandise including a bag, laptop, smartphone."
-          class="image image--slide-2 image--tablet hidden"  
+          class="image image--brand image--slide-2 image--tablet hidden"  
         >
         <!-- Displayed on desktop, hidden on page load. -->
         <img 
           src="./assets/desktop/image-slide-2.jpg" 
           alt="New majestic hotel merchandise including a bag, laptop, smartphone."
-          class="image image--slide-2 image--desktop hidden"  
+          class="image image--brand image--slide-2 image--desktop hidden"  
         >
         <!-- Displayed on mobile, hidden on page load. -->
         <img 
           src="./assets/mobile/image-slide-3.jpg" 
           alt="Web design project titled crypto dashboard."
-          class="image image--slide-3 image--mobile hidden"  
+          class="image image--brand image--slide-3 image--mobile hidden"  
         >
         <!-- Displayed on tablet, hidden on page load. -->
         <img 
          src="./assets/tablet/image-slide-3.jpg" 
          alt="Web design project titled crypto dashboard."
-         class="image image--slide-3 image--tablet hidden"  
+         class="image image--brand image--slide-3 image--tablet hidden"  
         >
         <!-- Displayed on desktop, hidden on page load. -->
         <img 
           src="./assets/desktop/image-slide-3.jpg" 
           alt="Web design project titled crypto dashboard."
-          class="image image--slide-3 image--desktop hidden"  
+          class="image image--brand image--slide-3 image--desktop hidden"  
         >  
       </div>
 
-      <!-- Absolutely positioned bg pattern. -->
+      <!-- Hidden on mobile. Absolutely positioned bg pattern. -->
       <img src="./assets/svg/bg-pattern-wavy-white.svg" alt="" class="bg-wave-white">
     </section>
   </main>
