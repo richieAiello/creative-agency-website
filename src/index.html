@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="main.scss">
   <script type="module" src="index.js "></script>
@@ -19,7 +19,7 @@
 <body class="body">
 
   <nav class="nav">
-    <div class="container">
+    <div class="container wrapper">
       <img src="./assets/svg/logo.svg" alt="Creative logo" class="logo">
       <!-- Label is hidden and still accessible to screen readers. -->
       <label for="hamburger-menu" class="invisible-label">
@@ -33,9 +33,15 @@
       <!-- Hidden on mobile and displayed on click. Visible on tablet and desktop. -->
       <div class="nav__menu hidden">
         <ul class="nav__list">
-          <li class="nav__item">About</li>
-          <li class="nav__item">Service</li>
-          <li class="nav__item">Projects</li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link">Service</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link">Products</a>
+          </li>
         </ul>
         <a href="#" class="btn btn--schedule">Schedule a Call</a>
       </div>
