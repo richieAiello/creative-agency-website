@@ -245,6 +245,23 @@ $light-red: #FF9393;
 }
 
 /******************************
+  Footer
+******************************/
+.footer {
+  padding: 6.25rem 0;
+
+  &__heading {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .bg-wave-red {
+    display: none;
+  }
+}
+
+/******************************
   Buttons
 ******************************/
 .btn {
@@ -267,6 +284,7 @@ $light-red: #FF9393;
     line-height: 19.57px;
     padding: 1.4375rem 2.78125rem 1.3125rem 2.78125rem;
     background-color: $red;
+    color: $white;
     
     &:hover,
     &:focus {
