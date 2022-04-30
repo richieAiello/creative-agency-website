@@ -112,6 +112,50 @@ $light-red: #FF9393;
 }
 
 /******************************
+  Main
+******************************/
+.main {
+
+  &__heading {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .design {
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-black;
+    color: $white;
+
+    &__context {
+      padding: 4.5rem 0;
+      order: 2;
+      position: relative;
+    }
+
+    &__heading {
+      margin-bottom: 1.5rem;
+    }
+
+    &__text {
+      margin-bottom: 2.5rem;
+    }
+
+    .accent-text {
+      color: $red;
+    }
+
+    .bg-wave-red {
+      width: 63px;
+      height: 29px;
+      position: absolute;
+      top: -15px;
+      left: 0;
+    }
+  }
+}
+
+/******************************
   Buttons
 ******************************/
 .btn {
@@ -150,6 +194,19 @@ $light-red: #FF9393;
       background-color: $light-red;
     }
   }
+
+  &--design {
+    line-height: 18.35px;
+    padding-bottom: 0.5625rem;
+    border-bottom: 2px solid $red;
+    color: $red;
+
+    &:hover,
+    &:focus {
+      color: $light-red;
+      border-color: $light-red;
+    }
+  }
 }
 
 /******************************
@@ -162,6 +219,12 @@ $light-red: #FF9393;
   &--tablet,
   &--desktop {
     display: none;
+  }
+
+  &--hero,
+  &--design {
+    max-height: 250px;
+    object-position: top;
   }
 
   @media(min-width: 650px) {
