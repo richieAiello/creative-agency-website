@@ -4,6 +4,7 @@
 $white: #FFFFFF;
 $black: #000000;
 $bg-black: #191921;
+$grey: #434356;
 $red: #F94F4F;
 $light-red: #FF9393;
 
@@ -32,6 +33,13 @@ $light-red: #FF9393;
   font-weight: 800;
 }
 
+@media(min-width: 768px) {
+
+  .container {
+    width: min(100vw - 5rem, 1100px);
+  }
+} 
+
 /******************************
   Base Styles
 ******************************/
@@ -40,6 +48,17 @@ $light-red: #FF9393;
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
+
+  @media (min-width: 680px) {
+
+    display: grid;
+    grid-template-rows: 178px 606px 1807px 251px;
+    grid-template-areas: 
+      "nav"
+      "hero"
+      "main"
+      "footer";
+  }
 }
 
 /******************************
@@ -51,10 +70,12 @@ $light-red: #FF9393;
   .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
   }
 
   &__menu {
+    display: none;
     padding: 2rem 1.625rem 1.75rem 1.625rem;
     background-color: $bg-black;
     color: $white;
@@ -83,6 +104,74 @@ $light-red: #FF9393;
       letter-spacing: 1px;
     }
   }
+
+  &__bg-right {
+    display: none;
+  }
+
+  @media(min-width: 768px) {
+
+    grid-area: nav;
+    padding: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "a b c";
+    
+    .wrapper {
+      grid-area: b;
+    }
+
+    .hamburger,
+    .hamburger-label {
+      display: none;
+    }
+
+    &__menu {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      background-color: $red;
+      position: unset;
+      height: 100%;
+      width: calc(100% - 291px);
+    }
+
+    &__list {
+      display: flex;
+      text-align: left;
+      margin-left: auto;
+      margin-right: 1.75rem;
+    }
+
+    &__item {
+      margin-bottom: 0;
+
+      &:nth-of-type(2) {
+        margin: 0 1.25rem;
+      }
+    }
+  
+    &__link {
+      font-size: 0.9375rem;
+    }
+
+    &__bg-left,
+    &__bg-right {
+      display: block;
+      height: 100%;
+    }
+
+    &__bg-left {
+      grid-area: a;
+      background-color: $white;
+    }
+
+    &__bg-right {
+      grid-area: c;
+      background-color: $red;
+    }
+  }
 }
 
 /******************************
@@ -108,12 +197,22 @@ $light-red: #FF9393;
   &__text {
     margin-bottom: 2.5rem;
   } 
+
+  @media(min-width: 768px) {
+    
+    grid-area: hero;
+  }
 }
 
 /******************************
   Main
 ******************************/
 .main {
+
+  @media(min-width: 768px) {
+    
+    grid-area: main;
+  }
 
   &__heading {
     font-size: 2rem;
@@ -252,6 +351,7 @@ $light-red: #FF9393;
 ******************************/
 .footer {
   padding: 6.25rem 0;
+  background-color: $white;
 
   &__heading {
     font-size: 2rem;
@@ -261,6 +361,12 @@ $light-red: #FF9393;
 
   .bg-wave-red {
     display: none;
+  }
+
+  @media(min-width: 768px) {
+    
+    grid-area: footer;
+    padding: 0;
   }
 }
 
@@ -338,6 +444,20 @@ $light-red: #FF9393;
       }
     }
   }
+
+  @media(min-width: 768px) {
+    &--schedule-nav {
+      padding: 1.4375rem 1.125rem 1.3125rem 1.125rem;
+      background-color: $bg-black;
+      color: $white;
+      
+      &:hover,
+      &:focus {
+        background-color: $grey;
+        color: $white;
+      }
+    }
+  }
 }
 
 /******************************
@@ -363,7 +483,7 @@ $light-red: #FF9393;
     max-height: 450px;
   }
 
-  @media(min-width: 650px) {
+  @media(min-width: 768px) {
 
     &--mobile {
       display: none;

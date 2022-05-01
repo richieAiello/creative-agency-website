@@ -19,33 +19,37 @@
 <body class="body">
 
   <nav class="nav">
-    <div class="container wrapper">
-      <img src="./assets/svg/logo.svg" alt="Creative logo" class="logo">
-      <!-- Label is hidden and still accessible to screen readers. -->
-      <label for="hamburger-menu" class="invisible-label">
-        Click to open navigation menu on mobile
-      </label>
-      <!-- Displayed on mobile. -->
-      <button type="button" class="btn hamburger" id="hamburger-menu">
-        <img src="./assets/svg/icon-hamburger.svg" alt="" class="hamburger__open">
-        <img src="./assets/svg/icon-cross.svg" alt="" class="hamburger__close hidden">
-      </button>
-      <!-- Hidden on mobile and displayed on click. Visible on tablet and desktop. -->
-      <div class="nav__menu hidden">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link link">Service</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link link">Products</a>
-          </li>
-        </ul>
-        <a href="#" class="btn btn--schedule">Schedule a Call</a>
+      <div class="wrapper container">
+        <img src="./assets/svg/logo.svg" alt="Creative logo" class="logo">
+        <!-- Label is hidden and still accessible to screen readers. -->
+        <label for="hamburger-menu" class="invisible-label hamburger-label">
+          Click to open navigation menu on mobile
+        </label>
+        <!-- Displayed on mobile. -->
+        <button type="button" class="btn hamburger" id="hamburger-menu">
+          <img src="./assets/svg/icon-hamburger.svg" alt="" class="hamburger__open">
+          <img src="./assets/svg/icon-cross.svg" alt="" class="hamburger__close hidden">
+        </button>
+        <!-- Hidden on mobile and displayed on click. Visible on tablet and desktop. -->
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link link">Service</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link link">Products</a>
+            </li>
+          </ul>
+          <a href="#" class="btn btn--schedule btn--schedule-nav">Schedule a Call</a>
+        </div>
       </div>
-    </div>
+      <!-- Hidden on mobile -->
+      <div class="nav__bg-right"></div>
+      <!-- Hidden on mobile -->
+      <div class="nav__bg-left"></div>
   </nav>
 
   <header class="hero">
@@ -276,15 +280,14 @@
   </main>
 
   <footer class="footer container">
-    <h5 class="footer__heading bold">
-      Let's build something
-      <br>
-      great together.
-    </h5>
-    <a href="#" class="btn btn--schedule">Schedule a Call</a>
-    <!-- Hidden on mobile and tablet. -->
-    <img src="./assets/svg/bg-pattern-wave-red.svg" alt="" class="bg-wave-red">
+      <h5 class="footer__heading bold">
+        Let's build something
+        <br>
+        great together.
+      </h5>
+      <a href="#" class="btn btn--schedule">Schedule a Call</a>
+      <!-- Hidden on mobile and tablet. -->
+      <img src="./assets/svg/bg-pattern-wave-red.svg" alt="" class="bg-wave-red">
   </footer>
 </body>
-
 </html> 
