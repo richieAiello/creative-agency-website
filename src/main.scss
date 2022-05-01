@@ -201,6 +201,26 @@ $light-red: #FF9393;
   @media(min-width: 768px) {
     
     grid-area: hero;
+    position: relative;
+
+    &__context {
+      position: absolute;
+      margin-top: 4.8125rem;
+      margin-bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  
+    &__heading {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      margin-bottom: 1.1875rem;
+    }
+  
+    &__text {
+      margin-bottom: 2rem;
+      max-width: 40ch;
+    } 
   }
 }
 
@@ -492,6 +512,11 @@ $light-red: #FF9393;
     &--tablet {
       display: block;
     }
+
+    &--hero {
+      max-height: 100%;
+      margin-left: auto;
+    }
   }
 
   @media(min-width: 1440px) {
@@ -503,6 +528,17 @@ $light-red: #FF9393;
     &--desktop {
       display: block;
     }
+  }
+}
+
+@media(min-width: 1010px) {
+
+  .image--hero.image--tablet {
+    display: none;
+  }
+
+  .image--hero.image--desktop {
+    display: block;
   }
 }
 
