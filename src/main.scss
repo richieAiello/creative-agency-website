@@ -229,14 +229,14 @@ $light-red: #FF9393;
 ******************************/
 .main {
 
-  @media(min-width: 768px) {
-    
-    grid-area: main;
-  }
-
   &__heading {
     font-size: 2rem;
     line-height: 2.5rem;
+  }
+
+  @media(min-width: 768px) {
+    
+    grid-area: main;
   }
 
   .design {
@@ -269,6 +269,38 @@ $light-red: #FF9393;
       position: absolute;
       top: -15px;
       left: 0;
+    }
+
+    @media(min-width: 768px) {
+
+      display: grid;
+      grid-template-columns: 1fr 48px 1fr;
+      grid-template-areas: "img img content";
+
+      .container {
+        width: unset;
+        margin-inline: unset;
+      }
+
+      &__context {
+        grid-area: content;
+        padding: 7.5rem 0 0 4.3125rem;
+      }
+
+      &__heading {
+        margin-bottom: 2rem;
+        max-width: 10ch;
+      }
+  
+      &__text {
+        margin-bottom: 2rem;
+        max-width: 28ch;
+      }
+
+      .bg-wave-red {
+        top: 140px;
+        left: -30px;
+      }
     }
   }
 
@@ -516,6 +548,13 @@ $light-red: #FF9393;
     &--hero {
       max-height: 100%;
       margin-left: auto;
+    }
+
+    &--design {
+      grid-area: img;
+      max-height: 658px;
+      width: 100%;
+      object-position: center;
     }
   }
 
