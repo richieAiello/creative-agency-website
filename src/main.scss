@@ -346,7 +346,7 @@ $light-red: #FF9393;
     @media(min-width: 768px) {
 
       &__context {
-        padding: 6rem 0;
+        padding: 10.25rem 0 0;
         position: relative;
       }
   
@@ -355,6 +355,11 @@ $light-red: #FF9393;
         left: -300px;
         color: $black;
         position: absolute;
+      }
+
+      &__article {
+        margin-left: 3.75rem;
+        padding-right: 2rem;
       }
 
       &__bg-left {
