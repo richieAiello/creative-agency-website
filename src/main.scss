@@ -49,7 +49,7 @@ $light-red: #FF9393;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
 
-  @media (min-width: 680px) {
+  @media (min-width: 768px) {
 
     display: grid;
     grid-template-rows: 178px 606px 1807px 251px;
@@ -195,6 +195,7 @@ $light-red: #FF9393;
   }
 
   &__text {
+    max-width: 40ch;
     margin-bottom: 2.5rem;
   } 
 
@@ -256,6 +257,7 @@ $light-red: #FF9393;
     }
 
     &__text {
+      max-width: 38ch;
       margin-bottom: 2.5rem;
     }
 
@@ -273,17 +275,8 @@ $light-red: #FF9393;
 
     @media(min-width: 768px) {
 
-      display: grid;
-      grid-template-columns: 1fr 48px 1fr;
-      grid-template-areas: "img img content";
-
-      .container {
-        width: unset;
-        margin-inline: unset;
-      }
-
       &__context {
-        grid-area: content;
+        order: unset;
         padding: 7.5rem 0 0 4.3125rem;
       }
 
@@ -305,16 +298,20 @@ $light-red: #FF9393;
   }
 
   .approach {
-    background-color: $white;
 
     &__context {
+      order: 3;
       color: $white;
       background-color: $red;
       padding: 6rem 0;
     }
 
     &__heading {
-      margin-bottom: 3.0625rem;
+      margin-bottom: 5.8125rem;
+    }
+
+    &__text {
+      max-width: 36ch;
     }
 
     &__article {
@@ -339,7 +336,66 @@ $light-red: #FF9393;
       opacity: 25%;
       position: absolute;
       left: -16px;
-      bottom: 71px;
+      top: -45px;
+    }
+
+    &__bg-left {
+      display: none;
+    }
+
+    @media(min-width: 768px) {
+
+      &__context {
+        padding: 6rem 0;
+        position: relative;
+      }
+  
+      &__heading {
+        top: 265px;
+        left: -300px;
+        color: $black;
+        position: absolute;
+      }
+
+      &__bg-left {
+        display: block;
+        background-color: $white;
+      }
+    }
+  }
+
+  .grid--design-approach {
+
+    @media(min-width: 768px) {
+      
+      display: grid;
+      grid-template-columns: 1fr 48px 1fr;
+      grid-template-rows: 538px 120px 677px;
+     
+      .container {
+        width: unset;
+        margin-inline: unset;
+      }
+
+      .design__context {
+        grid-column: 3;
+        grid-row: 1;
+      }
+
+      .image--design {
+        grid-column: 1/3;
+        grid-row: 1/3;
+      }
+
+      .approach__context {
+        grid-row: 2/4;
+        grid-column: 2/4;
+      }
+
+      .approach__bg-left {
+        grid-column: 1;
+        grid-row: 3/4;
+      }
     }
   }
 
@@ -519,15 +575,14 @@ $light-red: #FF9393;
   max-width: 100%;
   object-fit: cover;
 
-  &--tablet,
-  &--desktop {
+  &--small {
     display: none;
   }
 
   &--hero,
   &--design {
-    max-height: 250px;
-    object-position: top;
+    max-height: 350px;
+    object-position: 50% 20%;
   }
 
   &--brand {
@@ -537,11 +592,11 @@ $light-red: #FF9393;
 
   @media(min-width: 768px) {
 
-    &--mobile {
+    &--large {
       display: none;
     }
 
-    &--tablet {
+    &--small {
       display: block;
     }
 
@@ -551,35 +606,36 @@ $light-red: #FF9393;
     }
 
     &--design {
-      grid-area: img;
-      max-height: 658px;
+      max-height: unset;
       width: 100%;
       object-position: center;
     }
   }
 
+  @media(min-width: 1010px) {
+
+    &--small {
+      display: none;
+    }
+  
+    &--large {
+      display: block;
+    }
+  }
+
   @media(min-width: 1440px) {
 
-    &--tablet {
+    &--small {
       display: none;
     }
 
-    &--desktop {
+    &--large {
       display: block;
     }
   }
 }
 
-@media(min-width: 1010px) {
 
-  .image--hero.image--tablet {
-    display: none;
-  }
-
-  .image--hero.image--desktop {
-    display: block;
-  }
-}
 
 /******************************
   Display classes and keyframes
