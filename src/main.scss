@@ -52,7 +52,7 @@ $light-red: #FF9393;
   @media (min-width: 768px) {
 
     display: grid;
-    grid-template-rows: 178px 606px 1807px 251px;
+    grid-template-rows: 178px 606px auto auto;
     grid-template-areas: 
       "nav"
       "hero"
@@ -359,7 +359,7 @@ $light-red: #FF9393;
 
       &__article {
         margin-left: 3.75rem;
-        padding-right: 2rem;
+        padding-right: 2.5rem;
       }
 
       &__bg-left {
@@ -456,6 +456,65 @@ $light-red: #FF9393;
     .brand-icon {
       transition: all 400ms;
     }
+
+    @media(min-width: 768px) {
+      
+      display: grid;
+      grid-template-columns: 1fr 48px 1fr;
+      grid-template-rows: 352px 98px;
+
+      &__context {
+        grid-column: 1/3;
+        grid-row: 1;
+        display: flex;
+        justify-content: flex-end;
+        padding: 6.25rem 7rem 0 0;
+        z-index: 1;
+        
+        .container {
+          width: unset;
+          margin-inline: unset;
+        }
+      }
+
+      &__heading {
+        margin-bottom: 2rem;
+      }
+
+      &__display {
+        grid-column: 2/4;
+        grid-row: 1/3;
+      }
+
+      &__description,
+      &__shade {
+        top: 320px;
+        bottom: unset;
+      }
+
+      &__description {
+
+        .container {
+          width: min(100% - 2.5rem, 580px);
+          margin-inline: unset;
+        }
+      }
+
+      &__shade {
+        height: 130px;
+      }
+
+      .bg-wave-white {
+        width: 63px;
+        height: 29px;
+        display: block;
+        position: absolute;
+        top: 126px;
+        left: 15px;
+        z-index: 2;
+        transform: rotateX(180deg);
+      }
+    }
   }
 }
 
@@ -479,7 +538,7 @@ $light-red: #FF9393;
   @media(min-width: 768px) {
     
     grid-area: footer;
-    padding: 0;
+    // padding: 0;
   }
 }
 
@@ -559,6 +618,7 @@ $light-red: #FF9393;
   }
 
   @media(min-width: 768px) {
+    
     &--schedule-nav {
       padding: 1.4375rem 1.125rem 1.3125rem 1.125rem;
       background-color: $bg-black;
@@ -615,6 +675,10 @@ $light-red: #FF9393;
       width: 100%;
       object-position: center;
     }
+
+    &--brand {
+      height: 100%;
+    }
   }
 
   @media(min-width: 1010px) {
@@ -639,8 +703,6 @@ $light-red: #FF9393;
     }
   }
 }
-
-
 
 /******************************
   Display classes and keyframes
