@@ -700,6 +700,7 @@ $light-red: #FF9393;
 .footer {
   padding: 6.25rem 0;
   background-color: $white;
+  margin-top: 0.5rem;
 
   &__heading {
     font-size: 2rem;
@@ -714,13 +715,37 @@ $light-red: #FF9393;
   @media(min-width: 768px) {
     
     grid-area: footer;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
     padding: 4.375rem 0 6.3125rem;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     &__heading {
       margin-bottom: 0;
+    }
+  }
+
+  @media(min-width: 1440px) {
+
+    padding: 7.5rem 0 7.1875rem;
+
+    .container {
+      position: relative;
+    }
+    
+    &__heading {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  
+    .bg-wave-red {
+      display: block;
+      position: absolute;
+      top: 35px;
+      left: -232px;
     }
   }
 }
@@ -873,17 +898,6 @@ $light-red: #FF9393;
     &--brand {
       max-height: unset;
       height: 100%;
-    }
-  }
-
-  @media(min-width: 1240px) {
-
-    &--small {
-      display: none;
-    }
-  
-    &--large {
-      display: block;
     }
   }
 
