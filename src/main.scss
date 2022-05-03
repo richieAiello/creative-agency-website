@@ -19,7 +19,9 @@ $light-red: #FF9393;
   margin: 0;
 }
 
-.container {
+// container--approach remains active on tablet and desktop
+.container,
+.container--approach {
   width: calc(100% - 3rem);
   margin-inline: auto;
 }
@@ -35,10 +37,19 @@ $light-red: #FF9393;
 
 @media(min-width: 768px) {
 
-  .container {
-    width: min(100vw - 5rem, 1100px);
+  .container,
+  .container--approach {
+    width: 689px;
   }
 } 
+
+@media(min-width: 1440px) {
+
+  .container,
+  .container--approach {
+    width: 1110px;
+  }
+}
 
 /******************************
   Base Styles
@@ -58,6 +69,13 @@ $light-red: #FF9393;
       "hero"
       "main"
       "footer";
+  }
+
+  @media (min-width: 1440px) {
+
+    font-size: 1.125rem;
+    line-height: 2rem;
+    grid-template-rows: 178px 800px auto auto;
   }
 }
 
@@ -105,6 +123,7 @@ $light-red: #FF9393;
     }
   }
 
+  &__bg-left,
   &__bg-right {
     display: none;
   }
@@ -134,12 +153,12 @@ $light-red: #FF9393;
       background-color: $red;
       position: unset;
       height: 100%;
-      width: calc(100% - 291px);
     }
 
     &__list {
       display: flex;
       text-align: left;
+      padding-left: 2.0625rem;
       margin-left: auto;
       margin-right: 1.75rem;
     }
@@ -170,6 +189,27 @@ $light-red: #FF9393;
     &__bg-right {
       grid-area: c;
       background-color: $red;
+    }
+  }
+
+  @media(min-width: 1440px) {
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__list {
+      padding-left: 0;
+      margin-right: 2.9375rem;
+    }
+
+    &__item:nth-of-type(2) {
+      margin: 0 2rem;
+    }
+    
+    &__link {
+      font-size: 1rem;
     }
   }
 }
@@ -223,6 +263,25 @@ $light-red: #FF9393;
       max-width: 40ch;
     } 
   }
+
+  @media(min-width: 1440px) {
+
+    &__context {
+
+      margin-top: 7rem;
+    }
+
+    &__heading {
+      font-size: 5rem;
+      line-height: 5.5rem;
+      margin-bottom: 2.4375rem;
+    }
+
+    &__text {
+      margin-bottom: 3rem;
+      max-width: 45ch;
+    } 
+  }
 }
 
 /******************************
@@ -240,280 +299,397 @@ $light-red: #FF9393;
     grid-area: main;
   }
 
-  .design {
-    display: flex;
-    flex-direction: column;
-    background-color: $bg-black;
-    color: $white;
+  @media(min-width: 1440px) {
+
+    &__heading {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  }
+}
+
+.design {
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-black;
+  color: $white;
+
+  &__context {
+    padding: 4.5rem 0;
+    order: 2;
+    position: relative;
+  }
+
+  &__heading {
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    max-width: 38ch;
+    margin-bottom: 2.5rem;
+  }
+
+  .accent-text {
+    color: $red;
+  }
+
+  .bg-wave-red {
+    width: 63px;
+    height: 29px;
+    position: absolute;
+    top: -15px;
+    left: 0;
+  }
+
+  @media(min-width: 768px) {
 
     &__context {
-      padding: 4.5rem 0;
-      order: 2;
-      position: relative;
+      order: unset;
+      padding: 7.5rem 0 0 4.3125rem;
     }
 
     &__heading {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      max-width: 10ch;
     }
 
     &__text {
-      max-width: 38ch;
-      margin-bottom: 2.5rem;
-    }
-
-    .accent-text {
-      color: $red;
+      margin-bottom: 2rem;
+      max-width: 28ch;
     }
 
     .bg-wave-red {
-      width: 63px;
-      height: 29px;
-      position: absolute;
-      top: -15px;
-      left: 0;
-    }
-
-    @media(min-width: 768px) {
-
-      &__context {
-        order: unset;
-        padding: 7.5rem 0 0 4.3125rem;
-      }
-
-      &__heading {
-        margin-bottom: 2rem;
-        max-width: 10ch;
-      }
-  
-      &__text {
-        margin-bottom: 2rem;
-        max-width: 28ch;
-      }
-
-      .bg-wave-red {
-        top: 140px;
-        left: -30px;
-      }
+      top: 140px;
+      left: -30px;
     }
   }
 
-  .approach {
+  @media(min-width: 1440px) {
 
     &__context {
-      order: 3;
-      color: $white;
-      background-color: $red;
-      padding: 6rem 0;
+      order: unset;
+      padding: 12.5rem 0 0 9.625rem;
     }
 
     &__heading {
-      margin-bottom: 5.8125rem;
+      margin-bottom: 2.6875rem;
     }
 
     &__text {
-      max-width: 36ch;
+      max-width: 37ch;
+      margin-bottom: 3rem;
     }
 
-    &__article {
-      position: relative;
-      margin-left: 1rem;
-
-      &:nth-of-type(2) {
-        margin-top: 5.25rem;
-        margin-bottom: 5.25rem;
-      }
-    }
-
-    &__sub-heading {
-      font-size: inherit;
-      line-height: inherit;
-      margin-bottom: 0.9375rem;
-    }
-
-    .bg-number {
-      font-size: 5rem;
-      line-height: 5.5rem;
-      opacity: 25%;
-      position: absolute;
-      left: -16px;
-      top: -45px;
-    }
-
-    &__bg-left {
-      display: none;
-    }
-
-    @media(min-width: 768px) {
-
-      &__context {
-        padding: 10.25rem 0 0;
-        position: relative;
-      }
-  
-      &__heading {
-        top: 265px;
-        left: -300px;
-        color: $black;
-        position: absolute;
-      }
-
-      &__article {
-        margin-left: 3.75rem;
-        padding-right: 2.5rem;
-      }
-
-      &__bg-left {
-        display: block;
-        background-color: $white;
-      }
+    .bg-wave-red {
+      width: initial;
+      height: initial;
+      top: 234px;
+      left: -65px;
     }
   }
+}
 
-  .grid--design-approach {
+.approach {
 
-    @media(min-width: 768px) {
-      
-      display: grid;
-      grid-template-columns: 1fr 48px 1fr;
-      grid-template-rows: 538px 120px 677px;
-     
-      .container {
-        width: unset;
-        margin-inline: unset;
-      }
-
-      .design__context {
-        grid-column: 3;
-        grid-row: 1;
-      }
-
-      .image--design {
-        grid-column: 1/3;
-        grid-row: 1/3;
-      }
-
-      .approach__context {
-        grid-row: 2/4;
-        grid-column: 2/4;
-      }
-
-      .approach__bg-left {
-        grid-column: 1;
-        grid-row: 3/4;
-      }
-    }
-  }
-
-  .brand {
-    display: flex;
-    flex-direction: column;
+  &__context {
+    order: 3;
     color: $white;
+    background-color: $red;
+    padding: 6rem 0;
+  }
+
+  &__heading {
+    margin-bottom: 5.8125rem;
+  }
+
+  &__text {
+    max-width: 36ch;
+  }
+
+  &__article {
+    position: relative;
+    margin-left: 1rem;
+
+    &:nth-of-type(2) {
+      margin-top: 5.25rem;
+      margin-bottom: 5.25rem;
+    }
+  }
+
+  &__sub-heading {
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: 0.9375rem;
+  }
+
+  .bg-number {
+    font-size: 5rem;
+    line-height: 5.5rem;
+    opacity: 25%;
+    position: absolute;
+    left: -16px;
+    top: -44px;
+  }
+
+  &__bg-left {
+    display: none;
+  }
+
+  @media(min-width: 768px) {
 
     &__context {
-      order: 2;
-      padding: 4rem 0;
-      background-color: $bg-black;
+      padding: 10.25rem 0 0 3.7rem;
+    }
+
+    .container--approach {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 784px;
     }
 
     &__heading {
+      color: $black;
+    }
+
+    &__article {
+      margin-left: 0;
+    }
+
+    &__text {
+      max-width: 34ch;
+    }
+
+    &__bg-left {
+      display: block;
+      background-color: $white;
+    }
+  }
+
+  @media(min-width: 1440px) {
+
+    &__context {
+      padding: 15.25rem 0 0 21.5rem;
+    }
+
+    .container--approach {
+      top: 1184px;
+    }
+
+    &__article:nth-of-type(2) {
+      margin: 6.25rem 0;
+    }
+
+    &__sub-heading {
+      font-size: 1.25rem;
       margin-bottom: 1.5rem;
     }
 
+    .bg-number {
+      left: -59px;
+    }
+  }
+}
+
+.grid--design-approach {
+
+  @media(min-width: 768px) {
+    
+    display: grid;
+    grid-template-columns: 1fr 330px 48px 390px 1fr;
+    grid-template-rows: 538px 120px 677px;
+    position: relative;
+    
+    .container {
+      width: unset;
+      margin-inline: unset;
+    }
+
+    .design__context {
+      grid-column: 4/-1;
+      grid-row: 1;
+    }
+
+    .image--design {
+      grid-column: 1/4;
+      grid-row: 1/3;
+    }
+
+    .approach__context {
+      grid-column: 3/-1;
+      grid-row: 2/4;
+    }
+
+    .approach__bg-left {
+      grid-column: 1/3;
+      grid-row: 3/4;
+    }
+  }
+
+  @media(min-width: 1440px) {
+
+    grid-template-columns: 1fr 545px 190px 705px 1fr;
+    grid-template-rows: 784px 200px 900px;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+
+  &__context {
+    order: 2;
+    padding: 4rem 0;
+    background-color: $bg-black;
+  }
+
+  &__heading {
+    margin-bottom: 1.5rem;
+  }
+
+  &__display {
+    position: relative;
+    margin-bottom: -0.5rem;
+  }
+
+  &__description,
+  &__shade {
+    width: 100%;
+    position: absolute;
+    bottom: 7px;
+  }
+
+  &__description {
+    padding-bottom: 2.25rem;
+    z-index: 1;
+  }
+
+  &__sub-heading,
+  &__text {
+    font-size: inherit;
+    line-height: 1.25rem;
+    text-align: right;
+  }
+
+  &__shade {
+    height: 111px;
+    background-image: linear-gradient(to bottom, rgba($black, 0%), rgba($black, 100%));
+    opacity: 75%;
+  }
+
+  .bg-wave-white {
+    display: none;
+  }
+
+  .brand-icon {
+    transition: all 400ms;
+  }
+
+  @media(min-width: 768px) {
+    
+    display: grid;
+    grid-template-columns: 1fr 330px 60px 378px 1fr;
+    grid-template-rows: 352px 98px;
+    position: relative;
+
+    &__context {
+      grid-column: 1/4;
+      grid-row: 1;
+      padding: 6.25rem 0 0;
+      z-index: 1;
+      
+      .container {
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 2rem;
+    }
+
     &__display {
-      position: relative;
-      margin-bottom: -0.5rem;
+      grid-column: 3/-1;
+      grid-row: 1/3;
     }
 
     &__description,
     &__shade {
-      width: 100%;
-      position: absolute;
-      bottom: 7px;
+      bottom: 0;
     }
 
     &__description {
-      padding: 2.25rem 0;
-      z-index: 1;
+      padding-bottom: 2.8125rem;
+
+      .container {
+        width: 375px;
+        margin-inline: unset;
+        margin-right: auto;
+      }
+    }
+
+    &__shade {
+      height: 130px;
+    }
+
+    .bg-wave-white {
+      width: 63px;
+      height: 29px;
+      display: block;
+      position: absolute;
+      top: 126px;
+      left: 29px;
+      z-index: 2;
+      transform: rotateX(180deg);
+    }
+  }
+
+  @media(min-width: 1440px) {
+
+    grid-template-columns: 1fr 545px 190px 705px 1fr;
+    grid-template-rows: 528px 200px;
+
+    &__context {
+      padding: 9.5rem 0 0;
+    }
+
+    &__heading {
+      margin-bottom: 3.1875rem;
+    }
+
+    &__description {
+      padding-bottom: 4.25rem;
+
+      .container {
+        width: 725px;
+      }
     }
 
     &__sub-heading,
     &__text {
-      font-size: inherit;
-      line-height: 1.25rem;
-      text-align: right;
+      line-height: 2rem;
+    }
+
+    &__sub-heading {
+      font-size: 1.25rem;
+    }
+
+    &__text {
+      font-size: 1.125rem;
     }
 
     &__shade {
-      height: 111px;
-      background-image: linear-gradient(to bottom, rgba($black, 0%), rgba($black, 100%));
-      opacity: 75%;
+      height: 200px;
     }
 
     .bg-wave-white {
-      display: none;
-    }
-
-    .brand-icon {
-      transition: all 400ms;
-    }
-
-    @media(min-width: 768px) {
-      
-      display: grid;
-      grid-template-columns: 1fr 48px 1fr;
-      grid-template-rows: 352px 98px;
-
-      &__context {
-        grid-column: 1/3;
-        grid-row: 1;
-        display: flex;
-        justify-content: flex-end;
-        padding: 6.25rem 7rem 0 0;
-        z-index: 1;
-        
-        .container {
-          width: unset;
-          margin-inline: unset;
-        }
-      }
-
-      &__heading {
-        margin-bottom: 2rem;
-      }
-
-      &__display {
-        grid-column: 2/4;
-        grid-row: 1/3;
-      }
-
-      &__description,
-      &__shade {
-        top: 320px;
-        bottom: unset;
-      }
-
-      &__description {
-
-        .container {
-          width: min(100% - 2.5rem, 580px);
-          margin-inline: unset;
-        }
-      }
-
-      &__shade {
-        height: 130px;
-      }
-
-      .bg-wave-white {
-        width: 63px;
-        height: 29px;
-        display: block;
-        position: absolute;
-        top: 126px;
-        left: 15px;
-        z-index: 2;
-        transform: rotateX(180deg);
-      }
+      width: initial;
+      height: initial;
+      top: 186px;
+      left: 123px;
+      transform: unset;
     }
   }
 }
@@ -524,6 +700,7 @@ $light-red: #FF9393;
 .footer {
   padding: 6.25rem 0;
   background-color: $white;
+  margin-top: 0.5rem;
 
   &__heading {
     font-size: 2rem;
@@ -538,13 +715,37 @@ $light-red: #FF9393;
   @media(min-width: 768px) {
     
     grid-area: footer;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
     padding: 4.375rem 0 6.3125rem;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     &__heading {
       margin-bottom: 0;
+    }
+  }
+
+  @media(min-width: 1440px) {
+
+    padding: 7.5rem 0 7.1875rem;
+
+    .container {
+      position: relative;
+    }
+    
+    &__heading {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  
+    .bg-wave-red {
+      display: block;
+      position: absolute;
+      top: 35px;
+      left: -232px;
     }
   }
 }
@@ -638,6 +839,17 @@ $light-red: #FF9393;
       }
     }
   }
+
+  @media(min-width: 1440px) {
+
+    &--schedule-nav {
+      padding: 1.4375rem 2.78125rem 1.3125rem 2.78125rem;
+    }
+
+    &--design {
+      line-height: 1.375rem;
+    }
+  }
 }
 
 /******************************
@@ -684,18 +896,8 @@ $light-red: #FF9393;
     }
 
     &--brand {
+      max-height: unset;
       height: 100%;
-    }
-  }
-
-  @media(min-width: 1010px) {
-
-    &--small {
-      display: none;
-    }
-  
-    &--large {
-      display: block;
     }
   }
 
@@ -708,6 +910,21 @@ $light-red: #FF9393;
     &--large {
       display: block;
     }
+
+    &--design {
+      height: 984px;
+    }
+  }
+}
+
+@media(min-width: 1000px) {
+
+  .image--design.image--small {
+    display: none;
+  }
+
+  .image--design.image--large {
+    display: block;
   }
 }
 
