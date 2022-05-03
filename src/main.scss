@@ -19,7 +19,9 @@ $light-red: #FF9393;
   margin: 0;
 }
 
-.container {
+// container--approach remains active on tablet and desktop
+.container,
+.container--approach {
   width: calc(100% - 3rem);
   margin-inline: auto;
 }
@@ -35,7 +37,8 @@ $light-red: #FF9393;
 
 @media(min-width: 768px) {
 
-  .container {
+  .container,
+  .container--approach {
     width: min(100vw - 5rem, 1100px);
   }
 } 
@@ -427,14 +430,21 @@ $light-red: #FF9393;
 
       &__context {
         padding: 10.25rem 0 0 3.7rem;
-        position: relative;
+        // position: relative;
+      }
+
+      .container--approach {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 784px;
       }
   
       &__heading {
-        top: 265px;
-        left: -300px;
+        // top: 265px;
+        // left: -300px;
         color: $black;
-        position: absolute;
+        // position: absolute;
       }
 
       &__article {
@@ -457,9 +467,8 @@ $light-red: #FF9393;
         padding: 15.25rem 0 0 21.5rem;
       }
   
-      &__heading {
-        top: 400px;
-        left: -380px;
+      .container--approach {
+        top: 1184px;
       }
 
       &__article:nth-of-type(2) {
@@ -484,6 +493,7 @@ $light-red: #FF9393;
       display: grid;
       grid-template-columns: 1fr 48px 1fr;
       grid-template-rows: 538px 120px 677px;
+      position: relative;
      
       .container {
         width: unset;
