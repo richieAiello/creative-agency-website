@@ -183,13 +183,6 @@ $light-red: #FF9393;
 
   @media(min-width: 1440px) {
 
-    // .wrapper {
-    //   display: flex;
-    //   justify-content: space-between;
-    //   align-items: center;
-    //   position: relative;
-    // }
-
     .wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -295,6 +288,14 @@ $light-red: #FF9393;
     grid-area: main;
   }
 
+  @media(min-width: 1440px) {
+
+    &__heading {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  }
+
   .design {
     display: flex;
     flex-direction: column;
@@ -348,6 +349,30 @@ $light-red: #FF9393;
       .bg-wave-red {
         top: 140px;
         left: -30px;
+      }
+    }
+
+    @media(min-width: 1440px) {
+
+      &__context {
+        order: unset;
+        padding: 12.5rem 0 0 9.625rem;
+      }
+
+      &__heading {
+        margin-bottom: 2.6875rem;
+      }
+  
+      &__text {
+        max-width: 37ch;
+        margin-bottom: 3rem;
+      }
+
+      .bg-wave-red {
+        width: initial;
+        height: initial;
+        top: 234px;
+        left: -65px;
       }
     }
   }
@@ -456,6 +481,12 @@ $light-red: #FF9393;
         grid-column: 1;
         grid-row: 3/4;
       }
+    }
+
+    @media(min-width: 1440px) {
+
+      grid-template-columns: 1fr 160px minmax(705px, 1fr);
+      grid-template-rows: 784px 200px 900px;
     }
   }
 
@@ -699,6 +730,10 @@ $light-red: #FF9393;
     &--schedule-nav {
       padding: 1.4375rem 2.78125rem 1.3125rem 2.78125rem;
     }
+
+    &--design {
+      line-height: 1.375rem;
+    }
   }
 }
 
@@ -769,6 +804,10 @@ $light-red: #FF9393;
 
     &--large {
       display: block;
+    }
+
+    &--design {
+      height: 984px;
     }
   }
 }
