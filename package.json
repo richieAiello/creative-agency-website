@@ -22,8 +22,5 @@
     "@parcel/transformer-sass": "^2.5.0",
     "parcel": "^2.5.0",
     "sass": "^1.51.0"
-  },
-  "dependencies": {
-    "glider-js": "^1.7.7"
   }
 }

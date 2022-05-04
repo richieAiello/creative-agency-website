@@ -12,7 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="main.scss">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+
   <script type="module" src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 
   <title>Frontend Mentor | Creative single page site</title>
 </head>
@@ -196,41 +199,71 @@
           </div>
         </div>
       </div>
-
-      <!-- Look into applying lazy load to images in this section -->
       <div class="brand__display">
-        
-        <div class="brand__description">
-          <div class="container">
-            <h4 class="brand__sub-heading bold">Lean Product Roadmap</h4>
-            <p class="brand__text">2019 Project</p>
+        <div class="brand__glider">
+          <div class="brand__slide">
+            <!-- Only one of these images are displayed at a time -->
+            <!-- Displayed by default. -->
+            <img
+              src="./assets/desktop/image-slide-1.jpg"
+              alt="Person holing and reading a pamphlet of a product roadmap."
+              class="image image--brand image--slide-1"
+            >
+            <div class="brand__description">
+              <h4 class="brand__sub-heading bold">Lean Product Roadmap</h4>
+              <p class="brand__text">2019 Project</p>
+            </div>
+            <!-- Absolutely positioned at bottom of display -->
+            <div class="brand__shade"></div>
+          </div>
+          <!-- Hidden on page load. -->
+          <div class="brand__slide">
+            <img
+              src="./assets/desktop/image-slide-2.jpg"
+              alt="New majestic hotel merchandise including a bag, laptop, smartphone."
+              class="image image--brand image--slide-2"
+            >
+            <!-- Hidden on page load. -->
+            <div class="brand__description">
+              <h4 class="brand__sub-heading bold">New Majestic Hotel</h4>
+              <p class="brand__text">2018 Project</p>
+            </div>
+            <!-- Absolutely positioned at bottom of display -->
+            <div class="brand__shade"></div>
+          </div>
+          <div class="brand__slide">
+            <img
+              src="./assets/desktop/image-slide-3.jpg"
+              alt="Web design project titled crypto dashboard."
+              class="image image--brand image--slide-3"
+            >
+            <div class="brand__description">
+              <h4 class="brand__sub-heading bold">Crypto Dashboard</h4>
+              <p class="brand__text">2016 Project</p>
+            </div>
+            <!-- Absolutely positioned at bottom of display -->
+            <div class="brand__shade"></div>
           </div>
         </div>
-
-        <div class="brand__shade"></div>
-        <!-- Only one of these images are displayed at a time -->
-        <!-- Displayed by default. -->
-        <img 
-          src="./assets/desktop/image-slide-1.jpg" 
-          alt="Person holing and reading a pamphlet of a product roadmap."
-          class="image image--brand image--slide-1"  
-        >
-        <!-- Hidden on page load. -->
-        <img 
-          src="./assets/desktop/image-slide-2.jpg" 
-          alt="New majestic hotel merchandise including a bag, laptop, smartphone."
-          class="image image--brand image--slide-2 hidden"  
-        >
-        <!-- Hidden on page load. -->
-        <img 
-          src="./assets/desktop/image-slide-3.jpg" 
-          alt="Web design project titled crypto dashboard."
-          class="image image--brand image--slide-3 hidden"  
-        >  
         <!-- Hidden on mobile. Absolutely positioned bg pattern. -->
         <img src="./assets/svg/bg-pattern-wavy-white.svg" alt="" class="bg-wave-white">
       </div>
     </section>
+
+    <script>
+      new Glider(document.querySelector('.brand__glider'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        duration: .5,
+        scrollLock: true,
+        arrows: {
+          prev: '.btn--prev',
+          next: '.btn--next'
+        },
+        draggable: true,
+        rewind: true,
+      });
+    </script>
   </main>
   <footer class="footer">
       <div class="container">
