@@ -30,11 +30,3 @@ navBtnOpen.addEventListener('click', e => {
 navBtnClose.addEventListener('click', e => {
   toggleHidden();
 });
-
-// prevBtn.addEventListener('click', e => {
-
-// });
-
-// nextBtn.addEventListener('click', e => {
-
-// });
