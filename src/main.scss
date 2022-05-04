@@ -586,6 +586,21 @@ $light-red: #FF9393;
     // overflow: hidden;
   }
 
+  .glider {
+    height: 100%;
+  
+    &__slide {
+      margin-bottom: -0.5rem;
+    }
+  }
+
+  &__description {
+    width: calc(100% - 1.5rem);
+    position: absolute;
+    bottom: 35px;
+    z-index: 1;
+  }
+
   &__sub-heading,
   &__text {
     font-size: inherit;
@@ -639,20 +654,11 @@ $light-red: #FF9393;
       grid-row: 1/3;
     }
 
-    &__description,
-    &__shade {
-      bottom: 0;
+    &__description {
+      width: max-content;
+      bottom: 45px;
+      left: 237px;
     }
-
-    // &__description {
-    //   padding-bottom: 2.8125rem;
-
-    //   .container {
-    //     width: 375px;
-    //     margin-inline: unset;
-    //     margin-right: auto;
-    //   }
-    // }
 
     &__shade {
       height: 130px;
@@ -683,13 +689,10 @@ $light-red: #FF9393;
       margin-bottom: 3.1875rem;
     }
 
-    // &__description {
-    //   padding-bottom: 4.25rem;
-
-    //   .container {
-    //     width: 725px;
-    //   }
-    // }
+    &__description {
+      bottom: 68px;
+      left: 525px;
+    }
 
     &__sub-heading,
     &__text {
@@ -706,8 +709,6 @@ $light-red: #FF9393;
 
     &__shade {
       height: 200px;
-      // bottom: unset;
-      // top: 0;
     }
 
     .bg-wave-white {
@@ -717,14 +718,6 @@ $light-red: #FF9393;
       left: 123px;
       transform: unset;
     }
-  }
-}
-
-.glider {
-  height: 100%;
-
-  &__slide {
-    margin-bottom: -0.5rem;
   }
 }
 
@@ -906,7 +899,6 @@ $light-red: #FF9393;
   &--brand {
     width: 100%;
     max-height: 450px;
-    object-position: top;
   }
 
   @media(min-width: 768px) {
