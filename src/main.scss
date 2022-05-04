@@ -49,6 +49,7 @@ $light-red: #FF9393;
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
+  max-width: 100vw;
 
   @media (min-width: 768px) {
 
@@ -607,11 +608,11 @@ $light-red: #FF9393;
 
   &__shade {
     width: 100%;
-    height: 111px;
+    height: 119px;
     background-image: linear-gradient(to bottom, rgba($black, 0%), rgba($black, 100%));
     opacity: 75%;
     position: absolute;
-    bottom: 7px;
+    bottom: 0;
   }
 
   .bg-wave-white {
@@ -659,7 +660,7 @@ $light-red: #FF9393;
     }
 
     &__shade {
-      height: 130px;
+      height: 138px;
     }
 
     .bg-wave-white {
@@ -710,7 +711,7 @@ $light-red: #FF9393;
     }
 
     &__shade {
-      height: 200px;
+      height: 208px;
     }
 
     .bg-wave-white {
