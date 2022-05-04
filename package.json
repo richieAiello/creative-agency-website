@@ -24,6 +24,6 @@
     "sass": "^1.51.0"
   },
   "dependencies": {
-    "slick-carousel": "^1.8.1"
+    "glider-js": "^1.7.7"
   }
 }
