@@ -182,25 +182,25 @@
 
           <div class="wrapper">
             <!-- Label is hidden and still accessible to screen readers. -->
-            <label for="previous" class="invisible-label">
+            <label id="previous" class="invisible-label">
               Click to view the previous slide
             </label>
-            <button type="button" class="btn btn--prev" id="previous">
+            <button type="button" class="btn btn--prev" aria-labelledby="previous">
               <!-- SVG inserted via index.js -->
             </button>
 
             <!-- Label is hidden and still accessible to screen readers. -->
-            <label for="next" class="invisible-label">
+            <!-- <label class="invisible-label" id="next">
               Click to view the next slide
-            </label>
-            <button type="button" class="btn btn--next" id="next">
+            </label> -->
+            <button type="button" class="btn btn--next" aria-label="Click to view next slide">
               <!-- SVG inserted via index.js -->
             </button>
           </div>
         </div>
       </div>
       <div class="brand__display">
-        <div class="brand__glider">
+        <div class="brand__glider" tabindex="0">
           <div class="brand__slide">
             <!-- Only one of these images are displayed at a time -->
             <!-- Displayed by default. -->
@@ -210,7 +210,7 @@
               class="image image--brand image--slide-1"
             >
             <div class="brand__description">
-              <h4 class="brand__sub-heading bold">Lean Product Roadmap</h4>
+              <h3 class="brand__sub-heading bold">Lean Product Roadmap</h3>
               <p class="brand__text">2019 Project</p>
             </div>
             <!-- Absolutely positioned at bottom of display -->
@@ -225,7 +225,7 @@
             >
             <!-- Hidden on page load. -->
             <div class="brand__description">
-              <h4 class="brand__sub-heading bold">New Majestic Hotel</h4>
+              <h3 class="brand__sub-heading bold">New Majestic Hotel</h3>
               <p class="brand__text">2018 Project</p>
             </div>
             <!-- Absolutely positioned at bottom of display -->
@@ -238,7 +238,7 @@
               class="image image--brand image--slide-3"
             >
             <div class="brand__description">
-              <h4 class="brand__sub-heading bold">Crypto Dashboard</h4>
+              <h3 class="brand__sub-heading bold">Crypto Dashboard</h3>
               <p class="brand__text">2016 Project</p>
             </div>
             <!-- Absolutely positioned at bottom of display -->
@@ -265,7 +265,7 @@
       });
     </script>
   </main>
-  
+
   <footer class="footer">
       <div class="container">
         <h5 class="footer__heading bold">

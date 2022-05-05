@@ -13,13 +13,14 @@ This is a solution to the [Creative agency single page site challenge on Fronten
 ## Links
 
 - [Live Site URL](https://creative-agency-website-richieaiello.netlify.app/)
-- [Solution](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/built-with-parcel-bem-scss-javascript-and-gliderjs-for-carousel-H18fGHbL5)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
+- BEM Naming Convention
 - [SCSS](https://sass-lang.com/)
 - CSS Grid and Flexbox
 - JavaScript
