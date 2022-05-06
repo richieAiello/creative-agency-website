@@ -50,6 +50,7 @@ $light-red: #FF9393;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
   max-width: 100vw;
+  overflow-x: hidden;
 
   @media (min-width: 768px) {
 
@@ -90,16 +91,12 @@ $light-red: #FF9393;
   display: none;
 }
 
-.invisible-label {
-  position: absolute; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; 
-  width: 1px; 
-  margin: -1px;
+.hamburger {
+  background-color: initial;
+  border: initial;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
 
   .container,
   .container--approach {
@@ -107,7 +104,7 @@ $light-red: #FF9393;
   }
 } 
 
-@media(min-width: 1440px) {
+@media (min-width: 1440px) {
 
   .container,
   .container--approach {
@@ -163,7 +160,7 @@ $light-red: #FF9393;
     display: none;
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
 
     grid-area: nav;
     padding: 0;
@@ -175,12 +172,10 @@ $light-red: #FF9393;
     .wrapper {
       grid-area: a;
       display: grid;
-      grid-template-columns: 290px 398px;
+      grid-template-columns: 290px 1fr;
     }
-
-    .hamburger,
-    .hamburger-open-label,
-    .hamburger-close-label {
+    
+    .hamburger {
       display: none;
     }
     
@@ -223,10 +218,10 @@ $light-red: #FF9393;
     }
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
 
     .wrapper {
-      grid-template-columns: 570px 540px;
+      grid-template-columns: 570px 1fr;
     }
 
     &__list {
@@ -244,10 +239,6 @@ $light-red: #FF9393;
   }
 }
 
-.hamburger {
-  background-color: initial;
-  border: initial;
-}
 /******************************
   Header
 ******************************/
@@ -273,7 +264,7 @@ $light-red: #FF9393;
     margin-bottom: 2.5rem;
   } 
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     
     grid-area: hero;
     position: relative;
@@ -298,7 +289,7 @@ $light-red: #FF9393;
     } 
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
 
     &__context {
 
@@ -328,12 +319,12 @@ $light-red: #FF9393;
     line-height: 2.5rem;
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     
     grid-area: main;
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
 
     &__heading {
       font-size: 3.5rem;
@@ -375,7 +366,7 @@ $light-red: #FF9393;
     left: 0;
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
 
     &__context {
       order: unset;
@@ -398,7 +389,7 @@ $light-red: #FF9393;
     }
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
 
     &__context {
       order: unset;
@@ -469,7 +460,7 @@ $light-red: #FF9393;
     display: none;
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
 
     &__context {
       padding: 10.25rem 0 0 3.7rem;
@@ -500,7 +491,7 @@ $light-red: #FF9393;
     }
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
 
     &__context {
       padding: 15.25rem 0 0 21.5rem;
@@ -527,7 +518,7 @@ $light-red: #FF9393;
 
 .grid--design-approach {
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     
     display: grid;
     grid-template-columns: 1fr 330px 48px 390px 1fr;
@@ -560,7 +551,7 @@ $light-red: #FF9393;
     }
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
 
     grid-template-columns: 1fr 545px 190px 705px 1fr;
     grid-template-rows: 784px 200px 900px;
@@ -585,7 +576,7 @@ $light-red: #FF9393;
   &__display {
     height: 404px;
     position: relative;
-    overflow: hidden;
+    overflow-y: hidden;
   }
 
   &__slide {
@@ -623,7 +614,7 @@ $light-red: #FF9393;
     transition: all 400ms;
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     
     display: grid;
     grid-template-columns: 1fr 330px 60px 378px 1fr;
@@ -675,7 +666,7 @@ $light-red: #FF9393;
     }
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
 
     grid-template-columns: 1fr 545px 190px 705px 1fr;
     grid-template-rows: 528px 200px;
@@ -742,7 +733,7 @@ $light-red: #FF9393;
     display: none;
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     
     grid-area: footer;
     padding: 4.375rem 0 6.3125rem;
@@ -758,7 +749,7 @@ $light-red: #FF9393;
     }
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
 
     padding: 7.5rem 0 7.1875rem;
 
@@ -839,11 +830,11 @@ $light-red: #FF9393;
     }
   }
 
-  &--prev {
+  &--previous {
     margin-right: 1rem;
   }
 
-  &--prev,
+  &--previous,
   &--next { 
     
     &:hover,
@@ -855,7 +846,7 @@ $light-red: #FF9393;
     }
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     
     &--schedule-nav {
       padding: 1.4375rem 1.125rem 1.3125rem 1.125rem;
@@ -870,7 +861,7 @@ $light-red: #FF9393;
     }
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
 
     &--schedule-nav {
       padding: 1.4375rem 2.78125rem 1.3125rem 2.78125rem;
@@ -904,7 +895,7 @@ $light-red: #FF9393;
     height: 404px;
   }
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
 
     &--large {
       display: none;
@@ -930,7 +921,7 @@ $light-red: #FF9393;
     }
   }
 
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
 
     &--small {
       display: none;
@@ -950,7 +941,7 @@ $light-red: #FF9393;
   }
 }
 
-@media(min-width: 1000px) {
+@media (min-width: 1000px) {
 
   .image--design.image--small {
     display: none;

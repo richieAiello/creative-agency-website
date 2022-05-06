@@ -24,22 +24,17 @@
   <nav class="nav">
       <div class="wrapper container">
         <img src="./assets/svg/logo.svg" alt="Creative logo" class="logo">
-        <!-- Label is hidden and still accessible to screen readers. -->
-        <label for="hamburger-menu-open" class="invisible-label hamburger-open-label">
-          Click to open navigation menu.
-        </label>
+
         <!-- Displayed on mobile, when nav menu is closed. -->
-        <button type="button" class="hamburger" id="hamburger-menu-open">
-          <img src="./assets/svg/icon-hamburger.svg" alt="" class="hamburger__open">
+        <button type="button" class="hamburger hamburger--open" aria-label="Click to open navigation menu.">
+          <img src="./assets/svg/icon-hamburger.svg" alt="">
         </button>
-        <!-- Label is hidden and still accessible to screen readers. -->
-        <label for="hamburger-menu-close" class="invisible-label hamburger-close-label hidden">
-          Click to close navigation menu.
-        </label>
+
         <!-- Displayed on mobile, when nav menu is open. -->
-        <button type="button" class="hamburger hidden" id="hamburger-menu-close">
-          <img src="./assets/svg/icon-cross.svg" alt="" class="hamburger__close">
+        <button type="button" class="hamburger hamburger--close hidden" aria-label="Click to close navigation menu.">
+          <img src="./assets/svg/icon-cross.svg" alt="">
         </button>
+
         <!-- Hidden on mobile and displayed on click. Visible on tablet and desktop. -->
         <div class="nav__menu hidden">
           <ul class="nav__list">
@@ -181,11 +176,11 @@
           </h2>
 
           <div class="wrapper">
-            <button type="button" class="btn btn--prev" aria-label="Click to view the previous slide" id="previous">
+            <button type="button" class="btn btn--previous" aria-label="Click to view the previous slide">
               <!-- SVG inserted via index.js -->
             </button>
 
-            <button type="button" class="btn btn--next" aria-label="Click to view the next slide" id="next">
+            <button type="button" class="btn btn--next" aria-label="Click to view the next slide">
               <!-- SVG inserted via index.js -->
             </button>
           </div>
@@ -244,16 +239,16 @@
 
     <script>
       new Glider(document.querySelector('.brand__glider'), {
+        rewind: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         scrollLock: true,
         scrollLockDelay: 150,
         arrows: {
-          prev: '.btn--prev',
+          prev: '.btn--previous',
           next: '.btn--next'
         },
         draggable: true,
-        rewind: true,
       });
     </script>
   </main>

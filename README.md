@@ -32,7 +32,7 @@ This is a solution to the [Creative agency single page site challenge on Fronten
 
 - [Glider.js docs](https://nickpiscitelli.github.io/Glider.js/) - Very simple directions to implement a mobile friendly carousel.
 - [Kevin Powell](https://www.kevinpowell.co/) - Outstanding resource to improve CSS for all skill levels.
-- [CSS-TRICKS](https://css-tricks.com/) - Strong resource for specific CSS problems. Turning labels invisible while keeping them accessible to screen readers, etc.
+- [CSS-TRICKS](https://css-tricks.com/) - Strong resource for specific CSS problems.
 
 ## Author
 
